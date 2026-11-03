@@ -26,4 +26,32 @@ public class Movie extends MediaItem {
         System.out.println("Rating Code: " + ratingCode);
         System.out.println("---------------------");
     }// ends displayDetails
+
+    // Getters
+    public String getDirector() {
+        return director;
+    } // end getDirector
+
+    public double getDuration() {
+        return duration;
+    } // end getDuration
+
+    public String getRatingCode() {
+        return ratingCode;
+    } // end getRatingCode
+
+
+    // Setters
+    // ---------------------------
+    public void setDirector(String director) {
+        this.director = director;
+    } // end setDirector
+
+    public void setDuration(Double duration) {
+        this.duration = duration;
+    } // end setDuration
+
+    public void setRatingCode(String ratingCode) {
+        this.ratingCode = ratingCode;
+    } // end setRatingCode
 }
