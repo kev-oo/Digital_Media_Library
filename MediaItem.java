@@ -29,79 +29,78 @@ public class MediaItem {
         this.favorite = false;
     } // end constructor Student(name, major, email, phone)
 
-    // --------------------------------------------------------
-    // Overloaded constructor
-    // No phone number is provided, so we use a default value.
-    // --------------------------------------------------------
-    public Student(String name, String major, String email) {
-        this(name, major, email, "N/A");
-    } // end constructor Student(name, major, email)
-
-    // --------------------------------------------------------
-    // Overloaded constructor
-    // Only name and major are provided.
-    // --------------------------------------------------------
-    public Student(String name, String major) {
-        this(name, major, "unknown@email.com", "N/A");
-    } // end constructor Student(name, major)
-
-    // --------------------------------------------------------
-    // Overloaded constructor
-    // No values are provided.
-    // --------------------------------------------------------
-    public Student() {
-        this("Unknown", "Undeclared", "none@email.com", "N/A");
-    } // end constructor Student()
-
     // ---------------------------
     // Getters
     // ---------------------------
-    public String getName() {
-        return name;
-    } // end getName
+    public String getTitle() {
+        return title;
+    } // end getTitle
 
-    public String getMajor() {
-        return major;
-    } // end getMajor
+    public String getGenre() {
+        return genre;
+    } // end getGenre
 
-    public String getEmail() {
-        return email;
-    } // end getEmail
+    public int getYear() {
+        return year;
+    } // end getYear
 
-    public String getPhone() {
-        return phone;
-    } // end getPhone
+    public double getRating() {
+        return rating;
+    } // end getRating
+
+    public boolean isFavorite() {
+        return favorite;
+    } // end isFavorite
 
     // ---------------------------
     // Setters
     // ---------------------------
-    public void setName(String name) {
-        this.name = name;
-    } // end setName
+    public void setTitle(String title) {
+        this.title = title;
+    } // end setTitle
 
-    public void setMajor(String major) {
-        this.major = major;
-    } // end setMajor
+    public void setGenre(String genre) {
+        this.genre = genre;
+    } // end setGenre
 
-    public void setEmail(String email) {
-        this.email = email;
-    } // end setEmail
+    public void setYear(int year) {
+        this.year = year;
+    } // end setYear
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    } // end setPhone
+    public void setRating(double rating) {
+        this.rating = rating;
+    } // end setRating
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
+    } // end setFavorite
 
     // --------------------------------------------------------
     // Display method
     // A child class can override this method.
     // --------------------------------------------------------
-    public void displayStudent() {
-        System.out.println("Type: Student");
-        System.out.println("Name: " + name);
-        System.out.println("Major: " + major);
-        System.out.println("Email: " + email);
-        System.out.println("Phone: " + phone);
+    public void displayDetails() {
+        System.out.println("Title: " + title);
+        System.out.println("Genre: " + genre);
+        System.out.println("Year: " + year);
+        System.out.println("Rating: " + rating);
+        System.out.println("Favorite: " + favorite);
         System.out.println("----------------------");
-    } // end displayStudent
+    } // end displayDetails
 
-} // end class Student
+    public void toggleFavorite(){
+        favorite = !favorite;
+    }// end toggleFavorite
+
+    public void rateItem(double r) {
+        if (r >= 0 && r <= 5) {
+            rating = r;
+        } else {
+            System.out.println("Rating has to be between 0 and 5");
+        }
+    }// end rateItem
+
+    public int yearsOld(){
+        return 2026 - year;
+    }// end yearsOld
+} // end MediaItem class
