@@ -26,7 +26,7 @@ public class Song extends MediaItem {
     public void displayDetails() {
         super.displayDetails();
         System.out.println("Artist: " + artist);
-        System.out.println("Length: " + length + " minutes");
+        System.out.println("Length (min): " + length);
         System.out.println("Album: " + album);
         System.out.println("---------------------");
     }// ends displayDetails
@@ -34,28 +34,28 @@ public class Song extends MediaItem {
     // Getters
     public String getArtist() {
         return artist;
-    } // end getDirector
+    } // end getArtist
 
     public double getLength() {
         return length;
-    } // end getDuration
+    } // end getLength
 
     public String getAlbum() {
         return album;
-    } // end getRatingCode
+    } // end getAlbum
 
 
     // Setters
     // ---------------------------
     public void setArtist(String artist) {
         this.artist = artist;
-    } // end setDirector
+    } // end setArtist
 
     public void setLength(double length) {
         this.length = length;
-    } // end setDuration
+    } // end setLength
 
     public void setAlbum(String album) {
         this.album = album;
-    } // end setRatingCode
+    } // end setAlbum
 }// end song class

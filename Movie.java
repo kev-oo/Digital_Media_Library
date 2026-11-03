@@ -22,7 +22,7 @@ public class Movie extends MediaItem {
     public void displayDetails() {
         super.displayDetails();
         System.out.println("Director: " + director);
-        System.out.println("Duration: " + duration);
+        System.out.println("Duration (hrs): " + duration);
         System.out.println("Rating Code: " + ratingCode);
         System.out.println("---------------------");
     }// ends displayDetails

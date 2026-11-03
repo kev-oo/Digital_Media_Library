@@ -85,7 +85,6 @@ public class MediaItem {
         System.out.println("Year: " + year);
         System.out.println("Rating: " + rating);
         System.out.println("Favorite: " + favorite);
-        System.out.println("----------------------");
     } // end displayDetails
 
     public void toggleFavorite(){

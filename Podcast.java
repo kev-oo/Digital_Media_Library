@@ -15,10 +15,10 @@ public class Podcast extends MediaItem {
 
     public double totalContentMinutes() {
         return episodes * avgLength;
-    } // end getRating
+    } // end totalContentMinutes
 
     public void promote(){
-        System.out.println("Don't miss " + getTitle() + "hosted by " + host + "!");
+        System.out.println("Check out " + host + "'s latest episode of " + "'" + getTitle() + "'!");
     }
 
     @Override
@@ -26,36 +26,36 @@ public class Podcast extends MediaItem {
         super.displayDetails();
         System.out.println("Host: " + host);
         System.out.println("Episodes: " + episodes);
-        System.out.println("Avg Length: " + avgLength + " minutes");
-        System.out.println("Total Content: " + totalContentMinutes() + " minutes");
+        System.out.println("Avg Length (min): " + avgLength);
+        System.out.println("Total Content (min): " + totalContentMinutes());
         System.out.println("---------------------");
     }// ends displayDetails
 
     // Getters
     public String getHost() {
         return host;
-    } // end getDirector
+    } // end getHost
 
     public int getEpisodes() {
         return episodes;
-    } // end getDuration
+    } // end getEpisodes
 
     public double getAvgLength() {
         return avgLength;
-    } // end getRatingCode
+    } // end getAvgLength
 
 
     // Setters
     // ---------------------------
     public void setHost(String host) {
         this.host = host;
-    } // end setDirector
+    } // end setHost
 
     public void setEpisodes(int episodes) {
         this.episodes = episodes;
-    } // end setDuration
+    } // end setEpisodes
 
     public void setAvgLength(double avgLength) {
         this.avgLength = avgLength;
-    } // end setRatingCode
+    } // end setAvgLength
 }
